@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        input{
+            width: 40px;
+        }
+        span{
+            margin: 0 5px;
+            display: inline-block;
+        }
+        button{
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    
+<input type="number" id="a" />
+<span id="ab">?</span>
+<input type="number" id="b" />
+<span id="bc">?</span>
+<input type="number" id="c" />
+<button onclick="muqayise()">Yoxla</button>
+
+
+<script>
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let c = document.getElementById("c")
+    let ab = document.getElementById("ab")
+    let bc = document.getElementById("bc")
+
+    function muqayise(){
+        if( a.value > b.value ){
+            ab.innerHTML = ">";
+        }else if( a.value < b.value ){
+            ab.innerHTML = "<";
+        }else{
+            ab.innerHTML = "=";
+        }
+        
+        if( b.value > c.value ){
+            bc.innerHTML = ">"
+        }else if( b.value < c.value ){
+            bc.innerHTML = "<"
+        }else{
+             bc.innerHTML = "="
+        }
+    }
+
+   
+</script>
+</body>
+</html>

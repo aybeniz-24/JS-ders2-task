@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body{
+            width: 200px;
+            margin: auto 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ccc
+        }
+        input{
+            padding: 5px;
+            border-radius: 8px;
+            border: none;
+        }
+        button{
+            padding: 5px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        input button:hover{
+            border: 1px solid #ccc;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            border-radius: 8px;
+            width: 180px;
+            margin: 10px auto;
+            margin-left: 20px;
+        }
+        
+    </style>
+</head>
+    <body>
+        <h1>To-do Listimiz !</h1>
+
+        <input id="inp" type="text" placeholder="Daxil edin..." /> 
+        <button onclick="tap()">Gonder</button>
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <script>
+            const ul = document.querySelector("ul")
+            const inp = document.querySelector("#inp")
+
+
+            function tap(){
+                ul.innerHTML += `<li>${inp.value}</li>`
+            }
+
+            
+
+        </script>
+
+
+    </body>
+</html>

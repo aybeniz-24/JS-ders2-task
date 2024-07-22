@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 40px;
+            text-align: right;
+        }
+    </style>
+</head>
+    <body>
+        <input type="number" id="bolunen"  />  /
+        <input type="number" id="bolen" />
+        <button onclick="bol()">=</button>
+        <span id="ntc"></span>
+
+
+        <script>
+            const a = document.getElementById('bolunen')
+            const b = document.getElementById('bolen')
+            let ntc = document.getElementById('ntc')
+
+            function bol(){
+
+                let qaliq = bolunen.value % bolen.value
+               let qismet = (bolunen.value - qaliq) / bolen.value
+             
+
+           
+            //    let qismet = bolunen.value / bolen.value
+            //    let qaliq = bolunen.value % bolen.value
+             
+
+               ntc.innerHTML = Math.trunc(qismet) + ' , qaliq ' + qaliq
+            }
+
+        </script>
+    </body>
+</html>

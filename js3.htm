@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 40px;
+            text-align: right;
+        }
+        button{
+            height: 15px;
+        }
+    </style>
+</head>
+    <body>
+        <input type="number" id="x"  /> 
+        <button onclick="isare()">OK</button>
+        <div id="ntc"></div>
+
+
+        <script>
+            const a = document.getElementById('x')
+            let ntc = document.getElementById('ntc')
+
+            function isare(){
+
+                // if(x.value < 0 ) ntc.innerHTML = "menfi"
+                // else if (x.value == 0) ntc.innerHTML = "sifir"
+                // else ntv.innerHTML = "musbet"
+
+
+
+
+                ntc.innerHTML = x.value > 0 == 1 ?  "musbet" :
+                                x.value  == 0 ?  "sifir" : "menfi"
+
+            }
+
+        </script>
+    </body>
+</html>

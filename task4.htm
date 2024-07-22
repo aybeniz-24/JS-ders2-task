@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <style>
+        input{
+            width: 40px;
+        }     
+        div{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="a" /> X <sup>2</sup> +
+    <input type="number" id="b" /> X +
+    <input type="number" id="c" />
+    <button onclick="hesabla()">=</button>
+    <div>X <sub>1</sub> = <span id="x1"></span></div>
+    <div>X <sub>2</sub> = <span id="x2"></span></div>
+
+    <script>
+        let a = document.getElementById("a")
+        let b = document.getElementById("b")
+        let c = document.getElementById("c")
+        let x1 = document.getElementById("x1")
+        let x2 = document.getElementById("x2")
+
+        function hesabla(){
+            let diskriminant = b.value ** 2 - 4 * a.value * c.value;
+            if( diskriminant > 0 ){
+                x1.innerHTML = (-b.value - Math.sqrt(diskriminant)) / (2 * a.value);
+                x2.innerHTML = (-b.value + Math.sqrt(diskriminant)) / (2 * a.value);
+            }else if (diskriminant == 0 ){ 
+                x1.innerHTML = -b.value / (2 * a.value);
+                x2.innerHTML = x1.innerHTML;
+            }else{
+                x1.innerHTML = "həqiqi kökü yoxdur";
+                x2.innerHTML = "həqiqi kökü yoxdur";
+            }
+        }
+
+    </script>
+</body>
+</html>
